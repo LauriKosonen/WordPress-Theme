@@ -1,0 +1,132 @@
+/* Slideshow Container */
+.oe-slideshow-container {
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3em;
+}
+
+/* Slideshow Inner Wrapper */
+.oe-slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.oe-slide {
+    flex: 0 0 100%; /* Each slide takes 100% of the container width */
+    text-align: center;
+    position: relative; /* Allows positioning of child elements */
+    overflow: hidden; /* Ensures child elements stay within the bounds */
+}
+
+/* Image inside the slide */
+.oe-slide img {
+    width: 100%; /* Ensure images take the full width of the slide */
+    min-height: 400px; /* Maintain aspect ratio */
+    display: block; /* Remove any extra inline spacing */
+    max-height: 400px; /* Set your preferred max height */
+    object-fit: cover; /* Ensures the image fits within the height without distortion */
+    position: relative; /* For stacking purposes */
+    z-index: 1; /* Keeps the image below other elements */
+    pointer-events: auto; /* Ensure images are clickable */
+}
+
+/* Navigation Buttons */
+.oe-prev,
+.oe-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* Previous Button - Positioned at the left edge */
+.oe-prev {
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Next Button - Positioned at the right edge */
+.oe-next {
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oe-prev:hover,
+.oe-next:hover {
+    background-color: black;
+    opacity: 1;
+}
+
+/* Caption below the image */
+.oe-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Indicators inside the image */
+.oe-indicators {
+    position: absolute;
+    bottom: 10%; /* Adjust distance from the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Space between the dots */
+    justify-content: center;
+    z-index: 2; /* Ensure it stays above the image but below captions */
+}
+
+/* Individual indicator */
+.oe-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 0.5px solid white;
+}
+
+/* Active indicator */
+.oe-indicator.active {
+    background-color: darkgray;
+}
+
+/* Widget styling */
+.wp-widget-oegallery {
+    text-align: center; /* Center-align the widget as a whole */
+}
+
+.wp-widget-oegallery .widget-title {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Keep this for the title */
+}
+
+.wp-widget-oegallery .oe-slideshow-container {
+    margin: 0 auto;
+    display: block; /* Ensure proper block-level behavior */
+    position: relative; /* Needed for absolute positioning of indicators */
+}
+
+.wp-widget-oegallery .oe-slideshow-wrapper {
+    text-align: center; /* This is fine for centering if needed */
+}

@@ -1,0 +1,449 @@
+/*
+Theme name: Ocean Explorer
+Theme author: Lauri Kosonen
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#site-container {
+    /* max-width: 1200px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#site-header {
+    background: url('banner1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 94vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+#site-header h1 {
+    color: #ffffff;
+    text-shadow: 
+        0.5px 0.5px 0 #000000,  /* Right-down */
+        -0.5px -0.5px 0 #000000, /* Left-up */
+        0.5px -0.5px 0 #000000,  /* Right-up */
+        -0.5px 0.5px 0 #000000;  /* Left-down */
+    font-size: 6em;
+    font-weight: bold;
+    vertical-align: auto;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+#top-navi {
+    background-color: #003E5C;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-logo {
+    margin-right: auto; /* Pushes the menu to the right */
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
+}
+
+#top-navi .fa-anchor {
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+#top-navi > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#top-navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#top-navi > div > ul > li:first-child {
+    display: none;
+}
+
+#top-navi ul li a {
+    text-decoration: none;
+    height: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#top-navi ul li.current-menu-item > a, #top-navi ul li.current-post-ancestor > a  {
+    background-color: #55b0ff;
+}
+
+
+#content {
+    margin: 5em 10em;
+    padding: 10px;
+}
+
+body.single #content {
+    margin-top: 0;
+}
+
+#content a {
+    text-decoration: none;
+    color: #0088ff;
+    font-weight: bold;
+}
+
+#content h2 {
+    margin-bottom: 0;
+}
+
+#content h1 a, #content h2 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#content .date-category #content #news-box .date {
+    color: #808080;
+}
+
+#content article {
+    padding: 2em;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px 5px #c2c2c2;
+    margin-top: 0;
+
+}
+
+body.single #content > main > article {
+    border-radius: 0; /* No border radius for single posts */
+    box-shadow: none; /* No box shadow for single posts */
+}
+
+/* Target h2 and p elements specifically inside single posts */
+body.single #content > main > article h2,
+body.single #content > main > article p {
+    margin-top: 1em; /* Spacing from the image */
+    width: 70%; /* Width setting */
+    margin-left: auto; /* Center alignment */
+    margin-right: auto; /* Center alignment */
+}
+
+body.single #content > main > article img {
+    display: block; /* Makes the image a block element */
+    margin-left: auto; /* Center it horizontally */
+    margin-right: auto; /* Center it horizontally */
+    margin-top: 0;
+    max-width: 100%; /* Ensure images don’t exceed the width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.news-content {
+    display: flex;
+    align-items: flex-start; 
+    gap: 1em;
+}
+
+.thumbnail img {
+
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: rounding corners */
+}
+
+.text-content {
+    flex: 1;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.text-content h2 {
+    margin-top: 0;
+}
+
+/* Etusivu alkaa */
+.recent-articles-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 60px;
+    color: #333333;
+}
+
+.recent-reports-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 60px;
+    color: #333333;
+    margin-top: 100px;
+}
+
+#content #news-box {
+    display: flex;
+    gap: 7%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+#content #news-box .news {
+    width: 280px;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px 5px #c2c2c2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#content #news-box .news .news-thumbnail {
+    margin-bottom: 10px;
+}
+
+#content #news-box .news-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#content #news-box .news h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#content #news-box .news .date {
+    color: #808080;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#content #news-box .news p {
+    /* font-size: 0.95em;
+    color: #333333; */
+    margin-bottom: 5px;
+}
+
+/*Album*/
+#content .envira-gallery {
+    margin-top: 6em;
+}
+
+
+/* #site-footer {
+    margin: 0;
+    color: #ffffff;
+    background-color: #0088ff;
+    padding: 10px;
+    height: 15vh;
+} */
+
+#footer-nav .menu-item-49{
+    display: none;
+}
+
+/* #site-footer div {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#site-footer div h4 {
+    margin: 10px;
+}
+
+#site-footer div ul {
+    margin: 10px;
+    list-style: none;
+} */
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.form-submit #submit {
+    background-color: #0088ff;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#respond.comment-respond {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#respond.comment-respond textarea {
+    height: 120px;
+}
+
+#respond.comment-respond input[type="text"],
+#respond.comment-respond input[type="email"],
+#respond.comment-respond textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#comments {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.commentlist {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.commentlist li {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.commentlist .comment-content {
+    display: inline-block;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1338px) {
+    #content {
+        display: block;
+        width: 70%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    #content #news-box {
+        display: block;
+        width: 100%;
+        margin: 10px;
+
+    }
+    #content #news-box .news {
+        width: 100%;
+        margin-top: 4em;
+    }
+
+    #content article {
+        width: 100%;
+
+    
+    }
+
+}
+
+@media only screen and (max-width: 1080px) {
+    .news-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    #content {
+        display: block;
+        width: 100%;
+    }
+
+    #content main {
+        width: 100%;
+        margin: auto;
+    }
+
+    #top-navi ul {
+        display: block; 
+        background-color: #0088ff;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    #top-navi > div > ul > li {
+        display: block;
+        width: 100%;
+    }
+
+    #top-navi > div > ul > li:first-child {
+        display: block;
+        margin-top: 5px;
+    }
+
+    #top-navi ul li a {
+        padding: 15px;
+        background-color: #0088ff;
+        color: #ffffff;
+        text-align: center;
+        display: block;
+    }
+
+    #top-navi ul li a:hover {
+        background-color: #55b0ff;
+    }
+
+    #top-navi ul li.current-menu-item > a,
+    #top-navi ul li.current-post-ancestor > a {
+        background-color: #55b0ff;
+    }
+}

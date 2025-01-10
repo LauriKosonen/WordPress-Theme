@@ -1,0 +1,14 @@
+
+# BEGIN WordPress
+# Rivit, jotka ovat "BEGIN WordPress" ja "END WordPress" välissä on luotu dynaamisesti ja niitä tulee muokata vain WordPressin filttereillä. Kaikki manuaaliset muutokset riveihin tullaan yliajamaan.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /omateema/wordpress/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /omateema/wordpress/index.php [L]
+</IfModule>
+
+# END WordPress
