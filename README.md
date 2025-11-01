@@ -1,3 +1,3 @@
-Video Demo
+Video Demo (YouTube video)
 
-[![Watch the video](https://img.youtube.com/vi/-uA1TvTIgws/0.jpg)](https://youtu.be/-uA1TvTIgws)
+[<img src="https://img.youtube.com/vi/-uA1TvTIgws/maxresdefault.jpg" width="560" height="315" style="position: relative;">](https://youtu.be/-uA1TvTIgws)
