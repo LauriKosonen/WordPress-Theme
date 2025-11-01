@@ -1,3 +1,3 @@
 Video Demo (YouTube video)
 
-[![Watch the video](https://img.youtube.com/vi/-uA1TvTIgws/hqdefault.jpg)](https://youtu.be/-uA1TvTIgws)
+[![Watch the video](https://github.com/LauriKosonen/WordPress-Theme/blob/main/thumb.png?raw=true)](https://youtu.be/-uA1TvTIgws)
